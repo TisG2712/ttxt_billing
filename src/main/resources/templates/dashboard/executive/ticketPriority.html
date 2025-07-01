@@ -1,0 +1,157 @@
+<div class="content-page">
+    <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center p-2">
+                        <div class="info-topLeft">
+                            <a href="#" id="info-topLeft-prev">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </a>
+                            <label>
+                                <b> Trở lại </b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="tab-content" id="myTabContent" style="margin-top: 20px;">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="info-left d-flex align-items-center justify-content-center p-3 flex-column">
+                                        <div class="info-left-avatar">
+                                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="info-left-status mb-3">
+                                            <button type="button" class="btn btn-success btn-addNewUserGroup"  >
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Thêm mức độ ưu tiên ticket
+                                            </button>
+                                        </div>
+                                        <div class="info-left-email w-100 overflow-hidden">
+                                            <table class="table table-hover">
+                                                <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">Mã mức ưu tiên</th>
+                                                    <th scope="col">Tên mức ưu tiên</th>
+                                                    <th scope="col">Trạng thái</th>
+                                                    <th scope="col">Ngày tạo</th>
+                                                    <th scope="col">Hành động</th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="col">P0</th>
+                                                    <td>Khẩn cấp</td>
+                                                    <td>
+                                                        <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
+                                                    </td>
+                                                    <td>26-06-2025 12:14:01</td>
+                                                    <td>
+                                                        <i class="fa fa-pencil-square-o edit-icon" aria-hidden="true" style="margin-right: 10px;"></i>
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">P1</th>
+                                                    <td>Cao</td>
+                                                    <td>
+                                                        <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
+                                                    </td>
+                                                    <td>26-06-2025 12:14:02</td>
+                                                    <td>
+                                                        <i class="fa fa-pencil-square-o edit-icon" aria-hidden="true" style="margin-right: 10px;"></i>
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">P2</th>
+                                                    <td>Trung bình</td>
+                                                    <td>
+                                                        <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
+                                                    </td>
+                                                    <td>26-06-2025 12:14:03</td>
+                                                    <td>
+                                                        <i class="fa fa-pencil-square-o edit-icon" aria-hidden="true" style="margin-right: 10px;"></i>
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">P3</th>
+                                                    <td>Thấp</td>
+                                                    <td>
+                                                        <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
+                                                    </td>
+                                                    <td>26-06-2025 12:14:04</td>
+                                                    <td>
+                                                        <i class="fa fa-pencil-square-o edit-icon" aria-hidden="true" style="margin-right: 10px;"></i>
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">P4</th>
+                                                    <td>Theo kế hoạch</td>
+                                                    <td>
+                                                        <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
+                                                    </td>
+                                                    <td>26-06-2025 12:14:05</td>
+                                                    <td>
+                                                        <i class="fa fa-pencil-square-o edit-icon" aria-hidden="true" style="margin-right: 10px;"></i>
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modal Pop-up-->
+            <div class="modal fade modal-addService" id="modalUserGroup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog d-flex align-items-center">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"> Thêm mới mức độ ưu tiên ticket </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2 addService-content">
+                                <label for="addNameService">Tên mức độ ưu tiên : </label>
+                                <input type="text" id="addNameService" placeholder="Nhập tên mức độ ưu tiên">
+
+                            </div>
+                            <p class="mb-3 box-error"><i class="errorFromGloable" id="loiCategorySVName"></i></p>
+                            <div class="d-flex justify-content-between align-items-center mb-2 addService-content">
+                                <label for="addCodeService">Mã mức độ ưu tiên: </label>
+                                <input type="text" id="addCodeService" placeholder="Nhập mã mức độ ưu tiên">
+                            </div>
+                            <p class="mb-3 box-error"><i class="errorFromGloable" id="loiCategorySVCode"></i></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-close-addService" data-bs-dismiss="modal">Thoát</button>
+                            <button type="button" class="btn btn-primary btn-send-addService">Thêm mức độ ưu tiên ticket</button>
+                            <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        // Sửa thành class đúng của nút bạn dùng
+        $(".btn-addNewUserGroup").click(function() {
+            // Cách đúng để mở modal trong Bootstrap 5
+            var myModal = new bootstrap.Modal(document.getElementById('modalUserGroup'));
+            myModal.show();
+        });
+    });
+</script>
+<script th:src="@{/web/js/executive/ticketCategory.js}"></script>

@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabelEdit"> Thông tin trạng thái </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <input type="hidden" id="idStatus" th:value="${idStatus}">
+    <div class="d-flex justify-content-between align-items-center mb-2 editService-content">
+        <label for="addTitleNewStatus">Tiêu đề trạng thái : </label>
+        <div class="box-content-edit-input">
+            <input type="text" id="addTitleNewStatus" placeholder="Nhập tiêu đề trạng thái" th:value="${status.getStatusDetail()}">
+            <p class="box-loi" id="box-content-edit-inputName"></p>
+        </div>
+    </div>
+    <p class="mb-3 box-error"><i class="errorFromGloable" id="loiCategorySVNameEdit"></i></p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary btn-close-addStatus" data-bs-dismiss="modal">Thoát</button>
+    <button type="button" class="btn btn-primary btn-send-editStatus">Sửa trạng thái</button>
+</div>
+<script th:src="@{/web/js/status/inforStatus.js}"></script>

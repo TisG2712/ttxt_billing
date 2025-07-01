@@ -1,0 +1,74 @@
+<div class="content-page">
+    <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center p-2">
+                        <div class="info-topLeft">
+                            <a href="#" id="info-topLeft-prev">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </a>
+                            <label>
+                                <b> Trở lại</b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="info-left d-flex align-items-center justify-content-center p-3 flex-column">
+                        <div class="info-left-avatar">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-left-status mb-3 text-center" >
+                            <h3 >Danh sách đơn vị thuộc nhóm <span th:text="${nameStatus}"></span></h3>
+                            <input type="hidden" th:value="${id}" id="idGroup">
+                            <button class="btn btn-success btn-addNewPartnerToGroup"><i class="fa fa-plus" aria-hidden="true"></i>Thêm đơn vị vào nhóm</button>
+                        </div>
+                        <div class="info-left-email w-100 overflow-hidden">
+                            <table class="table table-hover">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên đơn vị</th>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Người đại diện</th>
+                                    <th scope="col">Ngày tạo</th>
+                                    <th scope="col">Hành động</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="partner, start : ${partnerGroupDtos}">
+                                    <th scope="row" th:text="${start.index + 1}"></th>
+                                    <td>
+                                        <a href="#" th:data-id="${partner.getPartnerId()}" class="link-bank view-bank" th:text="${partner.getPartnerName()}">
+                                        </a>
+                                    </td>
+                                    <td th:text="${partner.getPartnerCode()}"></td>
+                                    <td th:text="${partner.getPartnerUser()}"></td>
+                                    <td th:text="${@dateTimeFormatterUtil.format(partner.getCreatedAt(), 'dd-MM-yyyy HH:mm:ss')}"></td>
+                                    <td>
+                                        <a  href="#" class="remove-partner-group" th:data-id="${partner.getPartnerId()}">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="box-partner-item">
+        <div id="box-partner-item-content">
+
+        </div>
+    </div>
+</div>
+<script th:src="@{/web/js/group-partner/addPartnerToGroup.js}"></script>
+

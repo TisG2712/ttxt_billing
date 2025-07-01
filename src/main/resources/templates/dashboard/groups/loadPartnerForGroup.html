@@ -1,0 +1,20 @@
+<div class="box-partner-item-content-top border-bottom mb-3 pb-3">
+    <h3>Danh sách các đơn vị có thể thêm</h3>
+</div>
+<div class="box-partner-item-content-body">
+    <div class="list-group-content">
+        <ul>
+            <li class="d-flex align-items-center group-content-item mb-3"
+                th:each="itemPartner : ${customPartnerLiteDtos}"
+                th:if="${!productComparator.groupPartner(itemPartner, customPartnerDtos)}">
+                <input type="checkbox" class="group-content-item-input" name="option" th:value="${itemPartner.getId()}">
+                <span style="margin-left: 10px" th:text="${itemPartner.getPartnerName()}"></span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="box-partner-item-content-bottom text-right border-top mt-3 pt-3">
+    <button class="btn btn-warning btn-close-popup-list-group">Thoát</button>
+    <button class="btn btn-success btn-add-partner-to-group" th:data-idGroup="${idGroup}">Thêm</button>
+</div>
+<script th:src="@{/web/js/group-partner/loadPartnerForGroup.js}"></script>

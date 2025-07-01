@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/web/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/web/css/font-awesome.css}">
+    <link rel="stylesheet" th:href="@{/web/css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/web/css/owl.theme.default.min.css}">
+    <link rel="stylesheet" th:href="@{/web/css/app.css}">
+    <link rel="stylesheet" th:href="@{/web/css/login/login.css}">
+    <script th:src="@{/web/js/jquery.js}"></script>
+    <script th:src="@{/web/js/system-core.js}"></script>
+    <title>Admin</title>
+</head>
+<body>
+<!-- Thêm wrapper chia 2 cột -->
+<div class="login-container">
+    <!-- Cột trái: Ảnh nền -->
+    <div class="login-left">
+        <img th:src="@{/web/imgs/kts.png}" alt="Background" class="login-bg" />
+    </div>
+
+    <!-- Cột phải: Form login (giữ nguyên cấu trúc cũ) -->
+    <div class="login-right">
+        <div class="login_box">
+            <div class="logo_gtel">
+                <img class="logo_cds" alt="Tổng công ty Công nghệ - Viễn thông Toàn Cầu (Gtel) "
+                     title="Tổng công ty Công nghệ - Viễn thông Toàn Cầu (Gtel) "
+                     th:src="@{/web/imgs/logo_cds.png}" />
+                <span class="title_box">TTXT - Hệ thống phần mềm nội bộ</span>
+            </div>
+            <div class="box_content">
+                <form action="" id="form-login">
+                    <label class="title-input">Username</label>
+                    <div class="content-item">
+                        <input type="text" id="username" placeholder="Nhập tài khoản..." name="username" class="item_input">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <label class="title-input">Password</label>
+                    <div class="content-item">
+                        <input type="password" id="password" name="password" placeholder="Nhập mật khẩu..."
+                               class="item_input">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                    <div class="content-btn">
+                        <button type="submit" class="btn-login">Đăng nhập</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Giữ nguyên phần alert -->
+<div style="position: fixed; z-index: 9999; right: 10px; top: 75px">
+    <div class="alert alert-success alert-dismissible fade" role="alert" id="myAlert" style="display: none;">
+        <b id="contentAlert"></b>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade" role="alert" id="myAlertError" style="display: none;">
+        <b id="contentAlertError"></b>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+</body>
+<script th:src="@{/web/js/app.js}"></script>
+<script th:src="@{/web/js/bootstrap.min.js}"></script>
+<script th:src="@{/web/js/login/login.js}"></script>
+
+</html>

@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Container chính chia 2 cột */
+.login-container {
+    display: flex;
+    height: 100vh; /* Chiếm full màn hình */
+    overflow: hidden; /* Ẩn phần tràn màn hình */
+}
+
+/* Cột trái: Ảnh nền */
+.login-left {
+    flex: 1; /* Chiếm 50% */
+    background: #f5f5f5; /* Màu nền dự phòng nếu ảnh không load */
+}
+
+.login-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh phủ kín không bị méo */
+}
+
+/* Cột phải: Form login */
+.login-right {
+    flex: 1; /* Chiếm 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Giữ nguyên style cũ của form */
+.login_box {
+    width: 100%;
+    max-width: 450px; /* Giới hạn độ rộng form */
+    height: 500px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo_gtel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo_cds{
+    width: 250px;
+    height: 80px;
+    object-fit: scale-down;
+}
+
+.title_box{
+    margin: 20px 0 25px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.content-item{
+    margin-bottom: 20px;
+    height: 40px;
+    position: relative;
+}
+
+.content-item i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.item_input{
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+.item_input::placeholder{
+    font-size: 12px;
+    color: grey;
+}
+
+.title-input{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.content-btn{
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #0173FB;
+}
+
+.btn-login{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 13px;
+    background: transparent;
+}
+
+.content-btn:hover{
+    background-color: #1D7BFE;
+}
+
+/* Responsive: Đổi thành 1 cột trên mobile */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+    .login-left {
+        display: none; /* Ẩn ảnh trên mobile */
+    }
+    .login-right {
+        justify-content: center;
+        padding: 40px 20px;
+    }
+    .login_box{
+        width: 300px;
+        padding: 20px;
+    }
+}
