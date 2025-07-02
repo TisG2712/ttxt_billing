@@ -866,15 +866,17 @@ body {
 .fa-trash{
     color: red;
 }
+/*
 #sidebar-menu>ul>li>ul{
     padding-left: 66px;
 }
+*/
 .ul-children{
-    display: none
+    display: none;
 }
 .ul-children-group > li > a,
 #sidebar-menu>ul>li>ul>li>a {
-    color: #6e768e;
+    color: black;
     display: block;
     padding: 10px 0px;
     margin: 5px 0;
@@ -883,9 +885,11 @@ body {
     -webkit-transition: all .4s;
     transition: all .4s;
 }
+/*
 #sidebar-menu>ul>li>ul>li>a:hover{
     color: #00acc1;
 }
+*/
 .errorFromGloable{
     font-size: 12px;
     color: red;
@@ -1450,7 +1454,7 @@ li.partner i.fa-users{
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: black;
+        background-color: rgba(0,0,0,0.5);
         z-index: 1000;
         justify-content: center;
         align-items: center;
@@ -1463,4 +1467,48 @@ li.partner i.fa-users{
         width: 600px;
     }
 
+/* Sửa lại giao diện */
 
+.left-side-menu{
+    background-color: #4496E5;
+}
+
+.left-side-menu::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+
+#side-menu .menu-title{
+    color:white;
+}
+
+#sidebar-menu>ul>li>ul{
+    max-height: 350px;
+    overflow-y: auto;
+    color: black;
+    padding-left: 50px;
+    background-color: white;
+}
+
+.ul-children{
+    display: none;
+    overflow: hidden;
+}
+
+.ul-children::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+
+#sidebar-menu>ul>li>a{
+    color: white;
+}
+
+.navbar-custom{
+    background-color: #72B2E5;
+}
+
+#sidebar-menu>ul>li>ul>li>a:hover{
+    background-color: #4496E5;
+    color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+}
