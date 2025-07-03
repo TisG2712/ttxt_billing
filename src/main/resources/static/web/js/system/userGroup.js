@@ -32,5 +32,5 @@ $(document).ready(function() {
             // Lưu vào localStorage
             localStorage.setItem(`toggleState_${itemId}`, newStatus);
           });
-      });
+        });
 });

@@ -189,7 +189,6 @@ $(document).ready(function () {
                 loadingSpinner.style.display = "none"; // Ẩn loading khi hoàn tất
             }
         }
-
     });
     
     $(".view-transaction").click(function () {
