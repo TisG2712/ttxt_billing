@@ -1064,7 +1064,7 @@ li.partner i.fa-users{
 }
 .fa-toggle-off,
 .fa-toggle-on{
-    font-size: 26px;
+    font-size: 23px;
     cursor: pointer;
 }
 
@@ -1432,7 +1432,6 @@ li.partner i.fa-users{
 .updateStatus {
         cursor: pointer;
         transition: all 0.2s ease;
-        padding: 5px;
     }
 .toggle-on {
     color: #000000; /* Màu đen khi bật */
