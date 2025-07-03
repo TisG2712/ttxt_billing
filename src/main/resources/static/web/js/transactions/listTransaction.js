@@ -128,7 +128,7 @@ $(document).ready(function () {
                 startDate = $("#startDateWeek").val() + "T00:00:00";
                 endDate = $("#endDateWeek").val() + "T00:00:00";
                 break;
-            
+
         }
         if (role === "ADMIN") {
             try {
@@ -143,7 +143,7 @@ $(document).ready(function () {
                 if (!response.ok) throw new Error("Lỗi khi tải file!");
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
-                
+
                 // Tạo link ảo để tải file
                 const a = document.createElement("a");
                 a.href = url;
@@ -152,7 +152,7 @@ $(document).ready(function () {
                 a.click();
                 document.body.removeChild(a);
                 window.URL.revokeObjectURL(url);
-                
+
             } catch (error) {
                 console.error("Lỗi:", error);
                 alert("Không thể tải file Excel!");
@@ -160,7 +160,7 @@ $(document).ready(function () {
                 loadingSpinner.style.display = "none"; // Ẩn loading khi hoàn tất
             }
         } else if (role === "PARTNER") {
-            
+
             try {
                 const response = await fetch(`${localdomain}/reports/exportDataTransaction?startDate=${startDate}&endDate=${endDate}&page=0&size=10&status=${statusPartner}&partnerCode=${partnerCode}&id=${userId}`,
                     {
@@ -172,7 +172,7 @@ $(document).ready(function () {
                 if (!response.ok) throw new Error("Lỗi khi tải file!");
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
-                
+
                 // Tạo link ảo để tải file
                 const a = document.createElement("a");
                 a.href = url;
@@ -181,7 +181,7 @@ $(document).ready(function () {
                 a.click();
                 document.body.removeChild(a);
                 window.URL.revokeObjectURL(url);
-                
+
             } catch (error) {
                 console.error("Lỗi:", error);
                 alert("Không thể tải file Excel!");
@@ -189,7 +189,7 @@ $(document).ready(function () {
                 loadingSpinner.style.display = "none"; // Ẩn loading khi hoàn tất
             }
         }
-        
+
     });
     
     $(".view-transaction").click(function () {
