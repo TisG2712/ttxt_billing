@@ -608,7 +608,19 @@ $(document).ready(function () {
             let id = el.getAttribute("data-value");
             getCountGroupPartner(id, "group-" + id);
         })
-        
     });
-    
+
+    $(".metismenu > li > a.click").click(function(e) {
+        // Lấy phần tử cha li
+        var parentLi = $(this).parent('li');
+
+        // Nếu không phải menu đang mở
+        if (!parentLi.hasClass('active')) {
+            // Đóng tất cả menu khác
+            $(".metismenu > li").not(parentLi).removeClass('active');
+            $(".metismenu > li > ul.ul-children").not(parentLi.find('> ul')).slideUp();
+            $(".metismenu > li > ul.ul-children-group").not(parentLi.find('> ul')).slideUp();
+        }
+    });
+
 })

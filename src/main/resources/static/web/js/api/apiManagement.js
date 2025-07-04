@@ -1,10 +1,16 @@
 $(document).ready(function() {
-        // Sửa thành class đúng của nút bạn dùng
         $(".btn-addNewUserGroup").click(function() {
-            // Cách đúng để mở modal trong Bootstrap 5
-            var myModal = new bootstrap.Modal(document.getElementById('modalUserGroup'));
-            myModal.show();
+           $(".modal-addService").addClass("show")
         });
+        $(".btn-close-addService").click(function () {
+            $(".modal-addService").removeClass("show");
+        })
+        $(".modal-addService").click(function () {
+            $(this).removeClass("show");
+        })
+        $("#modal-content1").click(function (e) {
+            e.stopPropagation();
+        })
 
         // Lắng nghe sự kiện click cho tất cả nút
         document.querySelectorAll('.updateStatus').forEach(button => {

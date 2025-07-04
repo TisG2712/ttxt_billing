@@ -13881,12 +13881,16 @@ body.compensate-for-scrollbar {
 }
 #modalAddGroup,
 #modalAddStatus,
-#modalAddService{
+#modalAddService,
+#modalUserGroup,
+#modalEditUserGroup{
     background: rgba(51, 51, 51, 0.64);
 }
 .modal-addNewGroups.show,
 .modal-addStatus.show,
-.modal-addService.show{
+.modal-addService.show,
+.modal-addUserGroup.show,
+.modal-editUserGroup.show{
     opacity: 1;
 }
 
