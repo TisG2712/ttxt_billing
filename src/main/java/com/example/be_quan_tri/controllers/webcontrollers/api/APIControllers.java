@@ -113,6 +113,13 @@ public class APIControllers {
         return "dashboard/api/customPlugin";
     }
 
+    @GetMapping("pluginVersion")
+    public String pluginVersion(@RequestParam(defaultValue = "" , value = "size") String size,
+                               @RequestParam(defaultValue = "" , value = "page") String page){
+        System.out.println(size+"/"+page);
+        return "dashboard/api/pluginVersion";
+    }
+
     @GetMapping("pluginAccessControls")
     public String pluginAccessControl(@RequestParam(defaultValue = "" , value = "size") String size,
                                       @RequestParam(defaultValue = "" , value = "page") String page){

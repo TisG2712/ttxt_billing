@@ -26,15 +26,15 @@
                                         </div>
                                         <div class="info-left-status mb-3">
                                             <button type="button" class="btn btn-success btn-addNewUserGroup"  >
-                                                <i class="fa fa-plus" aria-hidden="true"></i> Thêm tài nguyên mạng & phân phối tải
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Thêm phiên bản Plugin
                                             </button>
                                         </div>
                                         <div class="info-left-email w-100 overflow-hidden">
                                             <table class="table table-hover">
                                                 <thead class="thead-dark">
                                                 <tr>
-                                                    <th scope="col">STT</th>
-                                                    <th scope="col">Tên nguyên mạng & phân phối tải</th>
+                                                    <th scope="col">Mã</th>
+                                                    <th scope="col">Tên phiên bản Plugin</th>
                                                     <th scope="col">Trạng thái</th>
                                                     <th scope="col">Ngày tạo</th>
                                                     <th scope="col">Hành động</th>
@@ -44,7 +44,7 @@
                                                 <tbody>
                                                 <tr>
                                                     <th scope="col">1</th>
-                                                    <td>NetworkResourceInventory</td>
+                                                    <td>Horizon</td>
                                                     <td>
                                                         <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
                                                     </td>
@@ -56,7 +56,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="col">2</th>
-                                                    <td>IPAllocationManager</td>
+                                                    <td>Stellar</td>
                                                     <td>
                                                         <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
                                                     </td>
@@ -68,7 +68,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="col">3</th>
-                                                    <td>BandwidthQuotaTracker</td>
+                                                    <td>Quantum Leap</td>
                                                     <td>
                                                         <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
                                                     </td>
@@ -80,23 +80,11 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="col">4</th>
-                                                    <td>DHCPLeaseMonitor</td>
+                                                    <td>Phoenix</td>
                                                     <td>
                                                         <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
                                                     </td>
                                                     <td>26-06-2025 12:14:04</td>
-                                                    <td>
-                                                        <i class="fa fa-pencil-square-o edit-icon" aria-hidden="true" style="margin-right: 10px;"></i>
-                                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col">5</th>
-                                                    <td>ResourceAccessMatrix</td>
-                                                    <td>
-                                                        <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
-                                                    </td>
-                                                    <td>26-06-2025 12:14:05</td>
                                                     <td>
                                                         <i class="fa fa-pencil-square-o edit-icon" aria-hidden="true" style="margin-right: 10px;"></i>
                                                         <i class="fa fa-trash" aria-hidden="true"></i>
@@ -117,25 +105,25 @@
                 <div class="modal-dialog d-flex align-items-center">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"> Thêm mới hệ thống danh mục </h5>
+                            <h5 class="modal-title" id="exampleModalLabel"> Thêm mới </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="d-flex justify-content-between align-items-center mb-2 addService-content">
-                                <label for="addNameService">Tên hệ thống danh mục : </label>
-                                <input type="text" id="addNameService" placeholder="Nhập tên phần mềm">
+                                <label for="addNameService">Tên: </label>
+                                <input type="text" id="addNameService" placeholder="Nhập tên">
 
                             </div>
                             <p class="mb-3 box-error"><i class="errorFromGloable" id="loiCategorySVName"></i></p>
                             <div class="d-flex justify-content-between align-items-center mb-2 addService-content">
-                                <label for="addCodeService">Mã hệ thống danh mục: </label>
-                                <input type="text" id="addCodeService" placeholder="Nhập mã phần mềm">
+                                <label for="addCodeService">Mã: </label>
+                                <input type="text" id="addCodeService" placeholder="Nhập mã">
                             </div>
                             <p class="mb-3 box-error"><i class="errorFromGloable" id="loiCategorySVCode"></i></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary btn-close-addService" data-bs-dismiss="modal">Thoát</button>
-                            <button type="button" class="btn btn-primary btn-send-addService">Thêm mới hệ thống danh mục</button>
+                            <button type="button" class="btn btn-primary btn-send-addService">Thêm mới</button>
                             <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -155,4 +143,4 @@
         });
     });
 </script>
-<script th:src="@{/web/js/system/userGroup.js}"></script>
+<script th:src="@{/web/js/api/apiManagement.js}"></script>

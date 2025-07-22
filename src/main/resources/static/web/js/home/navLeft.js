@@ -372,6 +372,11 @@ $(document).ready(function () {
             customGetPage(`${localdomain}/api/customPlugins?size=20&page=0`, "#content_box");
         });
 
+        // Quản lý phiên bản Plugin
+        $("#pluginVersionLink").click(function () {
+            customGetPage(`${localdomain}/api/pluginVersion?size=20&page=0`, "#content_box");
+        });
+
         // Quản lý quyền truy cập Plugin
         $("#pluginAccessControlLink").click(function () {
             customGetPage(`${localdomain}/api/pluginAccessControls?size=20&page=0`, "#content_box");
