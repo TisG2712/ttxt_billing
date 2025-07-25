@@ -108,12 +108,12 @@ $(document).ready(function () {
 
         // Quản lý Nhóm cán bộ
         $("#staffGroupManagementLink").click(function () {
-            customGetPage(`${localdomain}/system/staffManagement?size=${20}&page=${0}`, "#content_box");
+            customGetPage(`${localdomain}/system/staffGroupManagement?size=${20}&page=${0}`, "#content_box");
         });
 
         // Quản lý Vai trò
         $("#roleManagementLink").click(function () {
-            customGetPage(`${localdomain}/system/staffManagement?size=${20}&page=${0}`, "#content_box");
+            customGetPage(`${localdomain}/system/roleManagement?size=${20}&page=${0}`, "#content_box");
         });
 
         // Quản lý Hệ Thống Danh Mục
