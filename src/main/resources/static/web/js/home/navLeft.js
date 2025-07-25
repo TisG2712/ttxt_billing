@@ -15,8 +15,8 @@ $(document).ready(function () {
         $(this).parent().find("ul.ul-children").slideToggle();
     });
     $("#viewAPIManagement").click(function () {
-                $(this).parent().find("ul.ul-children").slideToggle();
-            });
+        $(this).parent().find("ul.ul-children").slideToggle();
+    });
     $("#viewDv").click(function () {
         $(this).parent().find("ul.ul-children").slideToggle();
     })
@@ -101,6 +101,21 @@ $(document).ready(function () {
             customGetPage(`${localdomain}/system/administrativeCategories?size=${20}&page=${0}`, "#content_box");
         });
 
+        // Quản lý Cán bộ
+        $("#staffManagementLink").click(function () {
+            customGetPage(`${localdomain}/system/staffManagement?size=${20}&page=${0}`, "#content_box");
+        });
+
+        // Quản lý Nhóm cán bộ
+        $("#staffGroupManagementLink").click(function () {
+            customGetPage(`${localdomain}/system/staffManagement?size=${20}&page=${0}`, "#content_box");
+        });
+
+        // Quản lý Vai trò
+        $("#roleManagementLink").click(function () {
+            customGetPage(`${localdomain}/system/staffManagement?size=${20}&page=${0}`, "#content_box");
+        });
+
         // Quản lý Hệ Thống Danh Mục
         $("#systemCategoryLink").click(function () {
             customGetPage(`${localdomain}/system/systemCategories?size=${20}&page=${0}`, "#content_box");
@@ -164,6 +179,11 @@ $(document).ready(function () {
         // Quản lý khóa mã hóa
         $("#encryptionKeyLink").click(function () {
             customGetPage(`${localdomain}/system/encryptionKeys?size=${20}&page=${0}`, "#content_box");
+        });
+
+        // Quản lý các tham số hệ thống
+        $("#systemParametersLink").click(function () {
+            customGetPage(`${localdomain}/system/systemParameters?size=${20}&page=${0}`, "#content_box");
         });
 
         // Quản lý dung lượng ổ đĩa

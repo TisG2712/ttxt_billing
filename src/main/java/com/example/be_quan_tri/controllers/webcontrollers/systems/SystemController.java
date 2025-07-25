@@ -107,6 +107,33 @@ public class SystemController {
         return "dashboard/system/administrativeCategory";
     }
 
+    @GetMapping("staffManagement")
+    public String staffManagement(
+            @RequestParam(defaultValue = "20") int size,
+            @RequestParam(defaultValue = "0") int page) {
+
+        System.out.println("Size: " + size + ", Page: " + page);
+        return "dashboard/system/staffManagement";
+    }
+
+    @GetMapping("staffGroupManagement")
+    public String staffGroupManagement(
+            @RequestParam(defaultValue = "20") int size,
+            @RequestParam(defaultValue = "0") int page) {
+
+        System.out.println("Size: " + size + ", Page: " + page);
+        return "dashboard/system/staffGroupManagement";
+    }
+
+    @GetMapping("roleManagement")
+    public String roleManagement(
+            @RequestParam(defaultValue = "20") int size,
+            @RequestParam(defaultValue = "0") int page) {
+
+        System.out.println("Size: " + size + ", Page: " + page);
+        return "dashboard/system/roleManagement";
+    }
+
     @GetMapping("systemCategories")
     public String systemCategory(
             @RequestParam(defaultValue = "20") int size,
@@ -134,7 +161,7 @@ public class SystemController {
         return "dashboard/system/systemParameterGroup";
     }
 
-    @GetMapping("systemParameters")
+    @GetMapping("systemParameter")
     public String systemParameter(
             @RequestParam(defaultValue = "20") int size,
             @RequestParam(defaultValue = "0") int page) {
@@ -224,6 +251,14 @@ public class SystemController {
         return "dashboard/system/encryptionKey";
     }
 
+    @GetMapping("systemParameters")
+    public String systemParameters(
+            @RequestParam(defaultValue = "20") int size,
+            @RequestParam(defaultValue = "0") int page) {
+
+        System.out.println("Size: " + size + ", Page: " + page);
+        return "dashboard/system/systemParameters";
+    }
 
     @GetMapping("diskStorage")
     public String diskStorage(
