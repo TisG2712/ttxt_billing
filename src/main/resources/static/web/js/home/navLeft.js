@@ -578,6 +578,9 @@ $(document).ready(function () {
         $("#reportLinkGroupPartner").click(function () {
             customGetPage(`${localdomain}/reports/reportAllGroupPartner?id=&startDate=${getFirstDayOfMonth()}&endDate=${getLastDayOfMonth()}`, "#content_box");
         });
+
+        // Các trang mới trong menu Quản lý báo cáo
+
         
     } else if (role === "PARTNER") {
         $(".report").click(function () {
