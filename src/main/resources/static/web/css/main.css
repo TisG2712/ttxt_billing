@@ -858,6 +858,8 @@ body {
 }
 .info-left-status{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .modal-addQuotas.show{
     background-color: #33333375;

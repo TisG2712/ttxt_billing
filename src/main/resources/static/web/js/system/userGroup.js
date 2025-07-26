@@ -61,4 +61,10 @@ $(document).ready(function() {
             localStorage.setItem(`toggleState_${itemId}`, newStatus);
           });
         });
+
+        // Nút xóa bạn có chắc chắn xóa không ?
+        function confirmDelete() {
+           return confirm("Bạn có chắc chắn muốn xóa không?");
+        }
+
 });
