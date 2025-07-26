@@ -133,7 +133,7 @@ $(document).ready(function () {
 
         // Quản lý tham số hệ thống
         $("#systemParameterLink").click(function () {
-            customGetPage(`${localdomain}/system/systemParameters?size=${20}&page=${0}`, "#content_box");
+            customGetPage(`${localdomain}/system/systemParameter?size=${20}&page=${0}`, "#content_box");
         });
 
         // Quản lý nhóm chức năng phần mềm
