@@ -28,6 +28,14 @@
                                             <button type="button" class="btn btn-success btn-addNewUserGroup"  >
                                                 <i class="fa fa-plus" aria-hidden="true"></i> Thêm tài nguyên mạng
                                             </button>
+                                            <div class="export-data">
+                                                <button type="button" class="btn btn-success btn-print"  >
+                                                    In danh sách
+                                                </button>
+                                                <button type="button" class="btn btn-success btn-export"  >
+                                                    Export danh sách
+                                                </button>
+                                            </div>
                                         </div>
                                         <div class="info-left-email w-100 overflow-hidden">
                                             <table class="table table-hover">
@@ -136,6 +144,35 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary btn-close-addService" data-bs-dismiss="modal">Thoát</button>
                             <button type="button" class="btn btn-primary btn-send-addService">Thêm mới hệ thống danh mục</button>
+                            <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Chỉnh sửa (thêm mới) -->
+            <div class="modal fade modal-editUserGroup" id="modalEditUserGroup" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel2"> Thông tin chỉnh sửa </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2 addService-content">
+                                <label for="addNameService2">Tên nhóm người dùng: </label>
+                                <input type="text" id="addNameService2" placeholder="Nhập tên nhóm người dùng">
+
+                            </div>
+                            <p class="mb-3 box-error"><i class="errorFromGloable" id="loiCategorySVName2"></i></p>
+                            <div class="d-flex justify-content-between align-items-center mb-2 addService-content">
+                                <label for="addCodeService2">Mã nhóm người dùng: </label>
+                                <input type="text" id="addCodeService2" placeholder="NND-001" disabled >
+                            </div>
+                            <p class="mb-3 box-error"><i class="errorFromGloable" id="loiCategorySVCode2"></i></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-close-editUserGroup" data-bs-dismiss="modal">Thoát</button>
+                            <button type="button" class="btn btn-primary btn-send-editUserGroup" id="btnSaveEdit">Lưu thay đổi</button>
                             <i data-id="352" data-status="0" class="fa fa-toggle-off updateStatus" aria-hidden="true"></i>
                         </div>
                     </div>
