@@ -580,8 +580,76 @@ $(document).ready(function () {
         });
 
         // Các trang mới trong menu Quản lý báo cáo
+        // Biểu đồ trạng thái dịch vụ môi trường kiểm thử
+        $("#testEnvServiceStatusChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/testEnvServiceStatusChart?size=20&page=0`, "#content_box");
+        });
 
-        
+        // Biểu đồ trạng thái dịch vụ môi trường vận hành
+        $("#prodEnvServiceStatusChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/prodEnvServiceStatusChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ các đơn vị chia sẻ nhiều dịch vụ nhất
+        $("#topSharingOrganizationsChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/topSharingOrganizationsChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ các dịch vụ tích hợp nhiều nhất
+        $("#topIntegratedServicesChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/topIntegratedServicesChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ tỷ lệ phê duyệt dịch vụ tích hợp
+        $("#integrationApprovalRateChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/integrationApprovalRateChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ diễn biến yêu cầu tích hợp
+        $("#integrationRequestTrendChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/integrationRequestTrendChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ top đơn vị sử dụng nhiều nhất theo thời gian
+        $("#topUsingOrganizationsChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/topUsingOrganizationsChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ số lượng sử dụng dịch vụ theo thời gian
+        $("#serviceUsageOverTimeChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/serviceUsageOverTimeChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ top dịch vụ có yêu cầu sử dụng nhiều nhất
+        $("#topRequestedServicesChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/topRequestedServicesChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ tỷ lệ sử dụng dịch vụ giữa các đơn vị
+        $("#usageRatioBetweenOrganizationsChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/usageRatioBetweenOrganizationsChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ tỷ lệ yêu cầu dịch vụ theo trạng thái
+        $("#requestRatioByStatusChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/requestRatioByStatusChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ trạng thái yêu cầu dịch vụ
+        $("#criticalServiceStatusChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/criticalServiceStatusChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ tổng hợp số lượng yêu cầu dịch vụ
+        $("#totalServiceRequestsChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/totalServiceRequestsChart?size=20&page=0`, "#content_box");
+        });
+
+        // Biểu đồ top 10 người dùng tích hợp nhiều nhất
+        $("#top10IntegratedUsersChart").click(function () {
+            customGetPage(`${localdomain}/reports/charts/top10IntegratedUsersChart?size=20&page=0`, "#content_box");
+        });
+
     } else if (role === "PARTNER") {
         $(".report").click(function () {
             let partnerId = $(this).attr("data-value");
@@ -637,6 +705,7 @@ $(document).ready(function () {
             getCountGroupPartner(id, "group-" + id);
         })
     });
+
 
     $(".metismenu > li > a.click").click(function(e) {
         // Lấy phần tử cha li

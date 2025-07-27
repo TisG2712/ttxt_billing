@@ -1513,3 +1513,44 @@ li.partner i.fa-users{
     padding-left: 10px;
     border-radius: 5px;
 }
+
+/* Giao diện biểu đồ */
+ .bar-chart {
+display: flex;
+gap: 20px;
+height: 80%;
+align-items: flex-end;
+justify-content: center;
+}
+.bar {
+  width: 60px;
+  background-color: steelblue;
+  height: var(--value);
+  border-radius: 2px;
+}
+.container {
+text-align: center;
+width: 100%;
+height: 90%;
+
+}
+
+.footer {
+  width: 100%;
+  height: 30px;
+background-color: #d71919;
+ margin-top: 20px;
+ }
+.search-bar {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.search-bar select, .search-bar button {
+  margin: 5px;
+
+}
+.content {
+margin-top: 30px;
+}

@@ -1,0 +1,28 @@
+<div class="content-page">
+    <div class="container">
+        <div class="content">
+            <h2>Biểu đồ trạng thái dịch vụ môi trường kiểm thử</h2>
+        </div>
+        <div class="search-bar">
+            <select id="monthSelect">
+                <option value="1">Ngày</option>
+                <option value="2">Tháng</option>
+                <option value="3">Quý</option>
+            </select>
+            <select id="yearSelect">
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+        </div>
+        <div class="bar-chart">
+            <div class="bar" style="--value: 60%">A</div>
+            <div class="bar" style="--value: 45%">B</div>
+            <div class="bar" style="--value: 90%">C</div>
+            <div class="bar" style="--value: 82%">D</div>
+            <div class="bar" style="--value: 25%">E</div>
+            <div class="bar" style="--value: 66%">F</div>
+            <div class="bar" style="--value: 86%">G</div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/web/js/report/charts.js}"></script>
