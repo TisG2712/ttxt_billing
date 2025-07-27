@@ -173,15 +173,4 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function() {
-        // Sửa thành class đúng của nút bạn dùng
-        $(".btn-addNewUserGroup").click(function() {
-            // Cách đúng để mở modal trong Bootstrap 5
-            var myModal = new bootstrap.Modal(document.getElementById('modalUserGroup'));
-            myModal.show();
-        });
-    });
-</script>
 <script th:src="@{/web/js/system/userGroup.js}"></script>

@@ -62,7 +62,18 @@ $(document).ready(function() {
           });
         });
 
-        // Nút xóa bạn có chắc chắn xóa không ?
+        // Sự kiện cho icon xóa thông tin
 
+          const trashIcons = document.querySelectorAll('.fa-trash');
 
+          trashIcons.forEach(function(icon) {
+            icon.addEventListener('click', function() {
+              if (confirm("Bạn có chắc chắn muốn xóa không?")) {
+                console.log("Xóa dữ liệu...");
+                // Ví dụ: icon.parentElement.remove(); // nếu muốn xóa phần tử cha chứa icon
+              } else {
+                console.log("Hủy xóa.");
+              }
+            });
+          });
 });
