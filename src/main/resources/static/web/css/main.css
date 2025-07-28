@@ -1514,7 +1514,7 @@ li.partner i.fa-users{
     border-radius: 5px;
 }
 
-/* Giao diện biểu đồ */
+/* Giao diện biểu đồ cột */
 .container {
     text-align: center;
     width: 100%;
@@ -1546,4 +1546,41 @@ li.partner i.fa-users{
 
 #monthSelect{
     margin-right: 20px;
+}
+
+/* Giao diện biểu đồ tròn */
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pie-chart {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4A90E2 0% 25%,       /* A - xanh dương */
+    #F5A623 25% 45%,     /* B - cam */
+    #7ED321 45% 100%     /* C - xanh lá */
+  );
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.legend {
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.color-box {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
 }

@@ -650,6 +650,11 @@ $(document).ready(function () {
             customGetPage(`${localdomain}/reports/charts/top10IntegratedUsersChart?size=20&page=0`, "#content_box");
         });
 
+        // Các trang báo cáo mới
+        $("#reportSystemTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportSystemTime?size=20&page=0`, "#content_box");
+        });
+
     } else if (role === "PARTNER") {
         $(".report").click(function () {
             let partnerId = $(this).attr("data-value");
