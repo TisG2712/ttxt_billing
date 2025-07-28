@@ -651,9 +651,744 @@ $(document).ready(function () {
         });
 
         // Các trang báo cáo mới
-
+        // Báo cáo hiệu suất hệ thống theo thời gian
         $("#reportSystemTime").click(function () {
             customGetPage(`${localdomain}/reports/list_reports/reportSystemTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hiệu suất hệ thống hoạt động theo đơn vị
+        $("#reportSystemUnit").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportSystemUnit?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hiệu suất hệ thống hoạt động theo Khu vực
+        $("#reportSystemRegion").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportSystemRegion?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Cập nhật và Bảo trì
+        $("#reportUpdateMaintenance").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportUpdateMaintenance?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo khách hàng theo các tiêu chí như độ tuổi, giới tính
+        $("#reportCustomerDemographics").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportCustomerDemographics?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng số lượt Tương tác Khách hàng theo nhân viên
+        $("#reportInteractionByStaff").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportInteractionByStaff?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo thông tin khách hàng
+        $("#reportCustomerInfo").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportCustomerInfo?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo phân khúc khách hàng
+        $("#reportCustomerSegment").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportCustomerSegment?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo dự báo doanh thu
+        $("#reportRevenueForecast").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportRevenueForecast?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo dự báo xu hướng thị trường
+        $("#reportMarketTrends").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportMarketTrends?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo dự báo tăng trưởng khách hàng
+        $("#reportCustomerGrowth").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportCustomerGrowth?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Chăm sóc Khách hàng
+        $("#reportCustomerCare").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportCustomerCare?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo số lượng khách hàng theo từng kênh liên hệ
+        $("#reportCustomerChannel").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportCustomerChannel?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất Xử lý Ticket
+        $("#reportTicketHandling").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTicketHandling?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Phân loại Ticket
+        $("#reportTicketCategory").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTicketCategory?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất Nhân viên
+        $("#reportStaffPerformance").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportStaffPerformance?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng hợp SLA
+        $("#reportSlaSummary").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportSlaSummary?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tình trạng Ticket
+        $("#reportTicketStatus").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTicketStatus?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng Doanh thu theo Đơn vị
+        $("#reportRevenueByUnit").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportRevenueByUnit?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hóa đơn
+        $("#reportInvoice").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportInvoice?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng số lượng thanh toán
+        $("#reportPaymentCount").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportPaymentCount?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tài chính
+        $("#reportFinance").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportFinance?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo số lượng Hợp đồng theo Đơn vị
+        $("#reportContractByUnit").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportContractByUnit?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Chiết khấu và Khuyến mãi
+        $("#reportDiscountPromotion").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportDiscountPromotion?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng hợp Lưu lượng API
+        $("#reportApiTraffic").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiTraffic?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo số lượng yêu cầu API theo xu hướng
+        $("#reportApiRequestTrends").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiRequestTrends?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng hợp lượng API khi vượt ngưỡng
+        $("#reportApiThreshold").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiThreshold?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng hợp Hiệu suất API
+        $("#reportApiPerformance").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiPerformance?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng hợp sử dụng băng thông
+        $("#reportApiBandwidth").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiBandwidth?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo về Plugin và Tiện ích
+        $("#reportPluginUsage").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportPluginUsage?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo số lượng yêu cầu API theo người dùng
+        $("#reportApiRequestByUser").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiRequestByUser?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng hợp thời gian phản hồi API
+        $("#reportApiResponseTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiResponseTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng giá trị hóa đơn theo thời gian
+        $("#reportInvoiceTotalValue").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportInvoiceTotalValue?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Số lượng hóa đơn hợp lệ, bị hủy, điều chỉnh
+        $("#reportInvoiceStatus").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportInvoiceStatus?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng Doanh thu từ hóa đơn theo từng thời kỳ
+        $("#reportRevenueByPeriod").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportRevenueByPeriod?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách hóa đơn đã xuất theo thời gian
+        $("#reportExportedInvoicesByTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportExportedInvoicesByTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách hóa đơn đã xuất theo khách hàng
+        $("#reportExportedInvoicesByStatus").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportExportedInvoicesByStatus?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách hóa đơn đã xuất theo loại hóa đơn
+        $("#reportExportedInvoicesByType").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportExportedInvoicesByType?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Chi tiết từng hóa đơn
+        $("#reportInvoiceDetails").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportInvoiceDetails?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo chi tiết số hóa đơn đã chỉnh sửa
+        $("#reportAdjustedInvoices").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportAdjustedInvoices?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo chi tiết số hóa đơn bị huỷ
+        $("#invoiceDetailCancelled").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceDetailCancelled?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo chi tiết doanh thu từ hóa đơn theo khách hàng
+        $("#invoiceRevenueByCustomer").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceRevenueByCustomer?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo chi tiết doanh thu từ hóa đơn theo nhóm khách hàng
+        $("#invoiceRevenueByCustomerGroup").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceRevenueByCustomerGroup?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo chi tiết doanh thu từ hóa đơn theo dịch vụ
+        $("#invoiceRevenueByService").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceRevenueByService?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo chi tiết doanh thu từ hóa đơn theo nhóm dịch vụ
+        $("#invoiceRevenueByServiceGroup").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceRevenueByServiceGroup?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng số hóa đơn VAT đầu ra theo thời gian
+        $("#vatInvoiceByTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/vatInvoiceByTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng số hóa đơn VAT đầu ra theo loại hóa đơn
+        $("#vatInvoiceByType").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/vatInvoiceByType?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo trạng thái hóa đơn đã phát hành
+        $("#invoiceStatusIssued").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceStatusIssued?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo trạng thái hóa đơn đã thanh toán
+        $("#invoiceStatusPaid").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceStatusPaid?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo trạng thái hóa đơn chưa thanh toán
+        $("#invoiceStatusUnpaid").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/invoiceStatusUnpaid?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng hợp Số lượng hợp đồng theo trạng thái
+        $("#contractCountByStatus").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractCountByStatus?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng hợp Số lượng hợp đồng theo thời gian
+        $("#contractCountByTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractCountByTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng hợp Số lượng hợp đồng theo loại dịch vụ
+        $("#contractCountByService").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractCountByService?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo chi tiết danh sách hợp đồng kèm thông tin chi tiết
+        $("#contractDetailList").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractDetailList?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Chi tiết hợp đồng theo nhật ký thay đổi
+        $("#contractChangeLog").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractChangeLog?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Chi tiết tiến độ hợp đồng so với kế hoạch
+        $("#contractProgressVsPlan").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractProgressVsPlan?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Chi tiết hợp đồng theo tiến độ thanh toán
+        $("#contractPaymentProgress").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractPaymentProgress?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách hợp đồng sắp hết hạn
+        $("#contractExpiringSoon").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractExpiringSoon?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách hợp đồng cần gia hạn
+        $("#contractNeedsRenewal").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractNeedsRenewal?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng giá trị hợp đồng đã thực hiện
+        $("#contractValueRealized").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractValueRealized?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng công nợ chưa thanh toán
+        $("#reportDebtTotal").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportDebtTotal?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất thực hiện hợp đồng của từng đối tác
+        $("#reportPartnerPerformance").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportPartnerPerformance?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Chất lượng dịch vụ theo hợp đồng
+        $("#reportRevenueByTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportRevenueByTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng doanh thu theo thời gian
+        $("#reportRevenueByService").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportRevenueByService?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng doanh thu theo loại dịch vụ
+        $("#reportRevenueByChannel").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportRevenueByChannel?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng doanh thu theo kênh thanh toán
+        $("#reportRevenueByCustomerGroup").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportRevenueByCustomerGroup?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng doanh thu theo nhóm khách hàng
+        $("#reportDebtFromGroup").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportDebtFromGroup?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng công nợ phải thu từ nhóm khách hàng
+        $("#reportDebtFromCustomer").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportDebtFromCustomer?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng công nợ phải thu từ khách hàng
+        $("#reportOverdueDebt").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportOverdueDebt?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Công nợ quá hạn & tình trạng thu hồi nợ
+        $("#reportPaymentHistory").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportPaymentHistory?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Lịch sử thanh toán theo khách hàng
+        $("#reportTotalCollectedRemaining").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTotalCollectedRemaining?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng số tiền đã thu và còn phải thu
+        $("#reportTransactionList").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTransactionList?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách các giao dịch theo thời gian thực
+        $("#reportPaymentMethod").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportPaymentMethod?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Giao dịch theo phương thức thanh toán
+        $("#reportTopDebtCustomers").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTopDebtCustomers?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Khách hàng có công nợ lớn nhất
+        $("#reportAPIUsage").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportAPIUsage?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Lưu lượng truy cập theo API endpoint
+        $("#reportApiTrafficEndpoint").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiTrafficEndpoint?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tình trạng uptime/downtime của API
+        $("#reportApiErrorRate").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiErrorRate?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Nhật ký yêu cầu API
+        $("#reportApiUptime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiUptime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách địa chỉ IP có hành vi bất thường
+        $("#reportApiRequestLog").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiRequestLog?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng số yêu cầu API theo từng endpoint
+        $("#reportApiRejectedRate").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiRejectedRate?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Lượt gọi API theo user
+        $("#reportAuthErrors").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportAuthErrors?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Lượt gọi API theo client
+        $("#reportSuspiciousIPs").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportSuspiciousIPs?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo danh sách API phổ biến nhất
+        $("#reportTotalRequestsByEndpoint").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTotalRequestsByEndpoint?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Sử dụng API theo khu vực
+        $("#reportApiCallsByUser").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiCallsByUser?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng số lỗi theo mã lỗi HTTP
+        $("#reportApiCallsByClient").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiCallsByClient?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Thống kê lỗi theo endpoint
+        $("#reportPopularApis").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportPopularApis?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tỷ lệ lỗi theo nhà phát triển
+        $("#reportApiUsageByRegion").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportApiUsageByRegion?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng số yêu cầu API theo thời gian
+        $("#reportHttpErrorCodes").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportHttpErrorCodes?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Dung lượng băng thông sử dụng
+        $("#reportEndpointErrors").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportEndpointErrors?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Số lượng ticket theo thời gian
+        $("#reportErrorRateByDev").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportErrorRateByDev?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Mức độ ưu tiên của ticket
+        $("#reportTotalApiRequestsByTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/reportTotalApiRequestsByTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Thời gian trung bình để phản hồi ticket
+        $("#avgReplyTimeTicket").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/avgReplyTimeTicket?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Thời gian trung bình để giải quyết ticket
+        $("#avgResolveTimeTicket").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/avgResolveTimeTicket?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tỷ lệ giải quyết thành công ticket ngay từ lần xử lý đầu tiên
+        $("#firstAttemptResolutionRate").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/firstAttemptResolutionRate?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất xử lý của nhân viên
+        $("#staffEfficiency").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/staffEfficiency?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất xử lý của nhóm nhân viên
+        $("#teamEfficiency").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/teamEfficiency?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Số lượng ticket quá hạn so với SLA
+        $("#slaOverdueTickets").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/slaOverdueTickets?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tỷ lệ ticket được giải quyết đúng hạn
+        $("#onTimeResolvedRate").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/onTimeResolvedRate?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Thời gian trung bình để xử lý ticket theo SLA
+        $("#avgSlaProcessTime").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/avgSlaProcessTime?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Số lượng ticket theo danh mục yêu cầu
+        $("#ticketCategoryReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/ticketCategoryReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Xu hướng phát sinh ticket theo danh mục
+        $("#ticketTrendReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/ticketTrendReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Mức độ hài lòng của khách hàng
+        $("#customerSatisfactionReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/customerSatisfactionReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Số lượng phản hồi tiêu cực
+        $("#negativeFeedbackReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/negativeFeedbackReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Số lượng phản hồi tích cực
+        $("#positiveFeedbackReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/positiveFeedbackReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Thời gian trung bình để giải quyết ticket có phản hồi tiêu cực
+        $("#negativeFeedbackResolutionTimeReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/negativeFeedbackResolutionTimeReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tỷ lệ sự cố lặp lại theo thời gian
+        $("#recurringIssueRateReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/recurringIssueRateReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Số lượng ticket xử lý bởi từng nhân viên
+        $("#ticketsByEmployeeReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/ticketsByEmployeeReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất làm việc của đội hỗ trợ
+        $("#supportTeamPerformanceReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/supportTeamPerformanceReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Phân loại khách hàng theo khu vực
+        $("#customerRegionReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/customerRegionReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Phân loại khách hàng theo ngành nghề
+        $("#customerIndustryReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/customerIndustryReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất chăm sóc khách hàng theo nhân viên
+        $("#employeePerformanceReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/employeePerformanceReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tỷ lệ phản hồi và mức độ hài lòng của khách hàng
+        $("#feedbackSatisfactionReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/feedbackSatisfactionReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng doanh số theo khách hàng
+        $("#customerRevenueReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/customerRevenueReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng doanh số theo khu vực
+        $("#regionRevenueReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/regionRevenueReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng doanh số theo nhóm khách hàng
+        $("#customerGroupRevenueReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/customerGroupRevenueReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng số Số lượng yêu cầu hỗ trợ theo thời gian
+        $("#supportRequestsOverTimeReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/supportRequestsOverTimeReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Thời gian xử lý trung bình của đội ngũ hỗ trợ
+        $("#averageResolutionTimeReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/averageResolutionTimeReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng số máy chủ đang chạy
+        $("#activeServersReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/activeServersReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tổng số dịch vụ đang chạy
+        $("#runningServicesReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/runningServicesReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo số lượng downtime theo thời gian
+        $("#downtimeReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/downtimeReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Trạng thái hiện tại của hệ thống
+        $("#systemStatusReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/systemStatusReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hiệu suất của máy chủ
+        $("#serverPerformanceReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/serverPerformanceReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách lỗi ghi nhận trong log hệ thống
+        $("#systemLogErrorsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/systemLogErrorsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tần suất lỗi theo thời gian
+        $("#errorFrequencyReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/errorFrequencyReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách đăng nhập thất bại
+        $("#failedLoginAttemptsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/failedLoginAttemptsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo danh sách người dùng
+        $("#userListReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/userListReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Danh sách tài khoản bị khóa hoặc chưa kích hoạt
+        $("#inactiveAccountsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/inactiveAccountsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tình trạng cơ sở dữ liệu
+        $("#databaseStatusReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/databaseStatusReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo sao lưu và phục hồi dữ liệu
+        $("#backupRecoveryReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/backupRecoveryReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo nhật ký thay đổi dữ liệu
+        $("#dataChangeLogReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/dataChangeLogReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo sử dụng tài nguyên
+        $("#resourceUsageReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/resourceUsageReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Thời gian phản hồi trung bình của API
+        $("#apiResponseTimeReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/apiResponseTimeReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo tình trạng phần cứng
+        $("#hardwareStatusReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/hardwareStatusReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Hiệu suất tổng hợp của toàn hệ thống
+        $("#systemPerformanceReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/systemPerformanceReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Điểm số hiệu suất so sánh theo từng giai đoạn
+        $("#performanceBenchmarkReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/performanceBenchmarkReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng theo trạng thái đã ký kết
+        $("#signedContractsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/signedContractsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng theo trạng thái chờ phê duyệt
+        $("#pendingApprovalContractsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/pendingApprovalContractsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng theo trạng thái bị hủy, hết hiệu lực
+        $("#salesContractsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/salesContractsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng theo loại Hợp đồng mua bán
+        $("#serviceContractsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/serviceContractsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng theo loại Hợp đồng dịch vụ
+        $("#leaseContractsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/leaseContractsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng theo loại Hợp đồng thuê tài sản
+        $("#contractsByPartnerReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractsByPartnerReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Tổng số hợp đồng theo từng đối tác
+        $("#contractValueByPartnerReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractValueByPartnerReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Giá trị hợp đồng theo từng đối tác
+        $("#actualRevenueReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/actualRevenueReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Doanh thu thực tế từ hợp đồng đã ký
+        $("#revenueByContractTypeReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/revenueByContractTypeReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo Doanh thu theo từng loại hợp đồng
+        $("#expiringContractsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/expiringContractsReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng sắp hết hạn theo từng giai đoạn
+        $("#expiringContractsByPhaseReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/expiringContractsByPhaseReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng cần gia hạn
+        $("#contractRenewalRequiredReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/contractRenewalRequiredReportLink?size=20&page=0`, "#content_box");
+        });
+
+        // Báo cáo hợp đồng gia hạn thất bại
+        $("#failedContractRenewalsReportLink").click(function () {
+            customGetPage(`${localdomain}/reports/list_reports/failedContractRenewalsReportLink?size=20&page=0`, "#content_box");
         });
 
     } else if (role === "PARTNER") {
