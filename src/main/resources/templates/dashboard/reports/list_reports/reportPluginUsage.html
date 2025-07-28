@@ -1,0 +1,75 @@
+<div class="content-page">
+    <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center mt-3 mb-3 ">
+                    <div class="d-flex transaction-box-find justify-content-between">
+                        <div class="row">
+                            <div class="loc ms-3" style="margin-right: 10px">
+                                <label for="startdate">Từ ngày :</label>
+                                <input type="text" id="startDate" name="startDate" startdate="2025-07-01T00:00" class="hasDatepicker" value="01/07/2025 00:00:00">
+                            </div>
+                            <div class="loc ms-3" style="margin-right: 10px">
+                                <label for="enddate">Đến ngày :</label>
+                                <input type="text" id="endDate" name="endDate" enddate="2025-07-31T23:59:59" class="hasDatepicker" value="31/07/2025 23:59:59">
+
+                            </div>
+                            <div class="loc ms-3" style="margin-right: 10px">
+                                <button type="button" class="btn btn-secondary btn-findReport"><i class="fa fa-search" aria-hidden="true"></i>
+                                    Tìm kiếm
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-exportData">Xuất báo cáo</button>
+                    </div>
+
+                </div>
+
+                <div class="col-12">
+                    <div class="tab-content" id="myTabContent" style="margin-top: 20px;">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="info-left d-flex align-items-center justify-content-center p-3 flex-column">
+                                        <div class="info-left-avatar">
+                                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                        </div>
+
+                                        <div class="info-left-email w-100 overflow-hidden" id="loadReport">
+                                            <div class="box-detail-report-Detail">
+                                                <table class="table table-hover">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">STT</th>
+                                                        <th scope="col">Tên dịch vụ</th>
+                                                        <th scope="col"> Tổng transaction </th>
+                                                        <th scope="col"> Tổng transaction thành công </th>
+                                                        <th scope="col"> Thành tiền </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    <tr>
+                                                        <td colspan="2">Tổng : </td>
+                                                        <td class="indam">0</td>
+                                                        <td class="indam">0</td>
+                                                        <td class="indam">0 VND</td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/web/js/report/list_report.js}"></script>
