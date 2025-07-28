@@ -12,6 +12,20 @@ $(document).ready(function() {
             e.stopPropagation();
         })
 
+        // Nút edit chỉnh sửa pop-up
+        $(".edit-icon").click(function() {
+            $(".modal-editUserGroup").addClass("show")
+        });
+        $("btn-close-editUserGroup").click(function() {
+            $(".modal-editUserGroup").removeClass("show")
+        });
+        $(".modal-editUserGroup").click(function () {
+            $(this).removeClass("show");
+        })
+        $("#modal-content1").click(function (e) {
+            e.stopPropagation();
+        })
+
         // Lắng nghe sự kiện click cho tất cả nút
         document.querySelectorAll('.updateStatus').forEach(button => {
           // Lấy ID của nút (để làm key lưu vào localStorage)
@@ -38,5 +52,20 @@ $(document).ready(function() {
             // Lưu vào localStorage
             localStorage.setItem(`toggleState_${itemId}`, newStatus);
           });
-      });
+        });
+
+           // Sự kiện cho icon xóa thông tin
+         const trashIcons = document.querySelectorAll('.fa-trash');
+
+         trashIcons.forEach(function(icon) {
+           icon.addEventListener('click', function() {
+             if (confirm("Bạn có chắc chắn muốn xóa không?")) {
+               console.log("Xóa dữ liệu...");
+               // Ví dụ: icon.parentElement.remove(); // nếu muốn xóa phần tử cha chứa icon
+             } else {
+               console.log("Hủy xóa.");
+             }
+           });
+         });
+
 });
