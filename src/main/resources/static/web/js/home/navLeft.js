@@ -651,6 +651,7 @@ $(document).ready(function () {
         });
 
         // Các trang báo cáo mới
+
         $("#reportSystemTime").click(function () {
             customGetPage(`${localdomain}/reports/list_reports/reportSystemTime?size=20&page=0`, "#content_box");
         });
