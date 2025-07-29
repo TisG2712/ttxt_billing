@@ -1558,8 +1558,8 @@ li.partner i.fa-users{
 }
 
 .pie-chart {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   background: conic-gradient(
     #4A90E2 0% 25%,       /* A - xanh dương */
