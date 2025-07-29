@@ -12,6 +12,20 @@ $(document).ready(function() {
             e.stopPropagation();
         })
 
+        // Nút edit chỉnh sửa pop-up
+        $(".edit-icon").click(function() {
+            $(".modal-editUserGroup").addClass("show")
+        });
+        $("btn-close-editUserGroup").click(function() {
+            $(".modal-editUserGroup").removeClass("show")
+        });
+        $(".modal-editUserGroup").click(function () {
+            $(this).removeClass("show");
+        })
+        $("#modal-content1").click(function (e) {
+            e.stopPropagation();
+        })
+
         // Lắng nghe sự kiện click cho tất cả nút
         document.querySelectorAll('.updateStatus').forEach(button => {
           // Lấy ID của nút (để làm key lưu vào localStorage)
