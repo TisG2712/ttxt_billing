@@ -179,6 +179,15 @@ public class SystemController {
         return "dashboard/system/softwareFunctionGroup";
     }
 
+    @GetMapping("softwareFunction")
+    public String softwareFunction(
+            @RequestParam(defaultValue = "20") int size,
+            @RequestParam(defaultValue = "0") int page) {
+
+        System.out.println("Size: " + size + ", Page: " + page);
+        return "dashboard/system/softwareFunction";
+    }
+
     @GetMapping("notificationGroups")
     public String notificationGroup(
             @RequestParam(defaultValue = "20") int size,

@@ -20,6 +20,10 @@ $(document).ready(function () {
     $("#viewDv").click(function () {
         $(this).parent().find("ul.ul-children").slideToggle();
     })
+    // Sự kiện dropdown của quản lý khách hàng
+    $("#viewCustomer").click(function () {
+        $(this).parent().find("ul.ul-children").slideToggle();
+    })
     $("#viewMore").click(function () {
         $(this).parent().find("ul.ul-children").slideToggle();
     })
@@ -139,6 +143,11 @@ $(document).ready(function () {
         // Quản lý nhóm chức năng phần mềm
         $("#softwareFunctionGroupLink").click(function () {
             customGetPage(`${localdomain}/system/softwareFunctionGroups?size=${20}&page=${0}`, "#content_box");
+        });
+
+        // Quản lý nhóm chức năng phần mềm
+        $("#softwareFunctionLink").click(function () {
+            customGetPage(`${localdomain}/system/softwareFunction?size=${20}&page=${0}`, "#content_box");
         });
 
         // Quản lý nhóm thông báo

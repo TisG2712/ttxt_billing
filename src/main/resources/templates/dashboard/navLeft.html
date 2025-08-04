@@ -10,7 +10,7 @@
 
   </a>
 
-  <!--- Sidemenu -->
+  <!--- Side-menu -->
   <div id="sidebar-menu">
 
     <ul class="metismenu" id="side-menu">
@@ -142,6 +142,12 @@
             <a class="softwareFunctionGroupLink click" id="softwareFunctionGroupLink">
               <i class="fa fa-th-large" aria-hidden="true"></i>
               <span> Quản lý Nhóm chức năng phần mềm </span>
+            </a>
+          </li>
+          <li>
+            <a class="softwareFunctionLink click" id="softwareFunctionLink">
+              <i class="fa fa-th-large" aria-hidden="true"></i>
+              <span> Quản lý Chức năng phần mềm </span>
             </a>
           </li>
           <li>
@@ -709,6 +715,161 @@
             <a class="click" href="#">
               <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
               Danh sách dịch vụ
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!--Quản lý khách hàng-->
+      <li class="qlCustomer" sec:authorize="hasRole('ADMIN')">
+        <a class="click" id="viewCustomer" href="#">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <span> Quản lý khách hàng </span>
+          <i class="fa fa-sort-desc" aria-hidden="true"></i>
+        </a>
+        <ul class="ul-children">
+          <li>
+            <a class="customerGroupManagementLink click" id="customerGroupManagementLink">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              <span>Quản lý Nhóm Khách Hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerManagementLink click" id="customerManagementLink">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>Quản lý Khách Hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="branchTypeManagementLink click" id="branchTypeManagementLink">
+              <i class="fa fa-code-fork" aria-hidden="true"></i>
+              <span>Quản lý Loại Chi nhánh</span>
+            </a>
+          </li>
+          <li>
+            <a class="serviceUsageManagementLink click" id="serviceUsageManagementLink">
+              <i class="fa fa-cogs" aria-hidden="true"></i>
+              <span>Quản lý Sử Dụng Dịch Vụ</span>
+            </a>
+          </li>
+          <li>
+            <a class="employeeGroupManagementLink click" id="employeeGroupManagementLink">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              <span>Quản lý nhóm Nhân viên</span>
+            </a>
+          </li>
+          <li>
+            <a class="employeeManagementLink click" id="employeeManagementLink">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>Quản lý Nhân viên</span>
+            </a>
+          </li>
+          <li>
+            <a class="organizationInfoManagementLink click" id="organizationInfoManagementLink">
+              <i class="fa fa-building" aria-hidden="true"></i>
+              <span>Quản Lý Thông Tin Tổ chức</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerContactManagementLink click" id="customerContactManagementLink">
+              <i class="fa fa-phone-square" aria-hidden="true"></i>
+              <span>Quản lý liên hệ khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="transactionHistoryManagementLink click" id="transactionHistoryManagementLink">
+              <i class="fa fa-exchange" aria-hidden="true"></i>
+              <span>Quản lý lịch sử giao dịch</span>
+            </a>
+          </li>
+          <li>
+            <a class="interactionHistoryManagementLink click" id="interactionHistoryManagementLink">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+              <span>Quản lý lịch sử tương tác</span>
+            </a>
+          </li>
+          <li>
+            <a class="workScheduleManagementLink click" id="workScheduleManagementLink">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Quản lý lịch làm việc</span>
+            </a>
+          </li>
+          <li>
+            <a class="notesRemindersManagementLink click" id="notesRemindersManagementLink">
+              <i class="fa fa-bell-o" aria-hidden="true"></i>
+              <span>Quản lý ghi chú và nhắc nhở</span>
+            </a>
+          </li>
+          <li>
+            <a class="resourceManagementLink click" id="resourceManagementLink">
+              <i class="fa fa-cubes" aria-hidden="true"></i>
+              <span>Quản lý nguồn lực</span>
+            </a>
+          </li>
+          <li>
+            <a class="leadConversionManagementLink click" id="leadConversionManagementLink">
+              <i class="fa fa-random" aria-hidden="true"></i>
+              <span>Quản lý tiến trình chuyển đổi khách hàng tiềm năng</span>
+            </a>
+          </li>
+          <li>
+            <a class="specialNotesManagementLink click" id="specialNotesManagementLink">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <span>Quản lý Ghi chú đặc biệt</span>
+            </a>
+          </li>
+          <li>
+            <a class="channelCategoryManagementLink click" id="channelCategoryManagementLink">
+              <i class="fa fa-list-alt" aria-hidden="true"></i>
+              <span>Quản lý Danh mục Kênh tiếp cận</span>
+            </a>
+          </li>
+          <li>
+            <a class="channelListManagementLink click" id="channelListManagementLink">
+              <i class="fa fa-list" aria-hidden="true"></i>
+              <span>Quản lý Danh sách Kênh tiếp cận</span>
+            </a>
+          </li>
+          <li>
+            <a class="feedbackManagementLink click" id="feedbackManagementLink">
+              <i class="fa fa-reply-all" aria-hidden="true"></i>
+              <span>Quản lý phản hồi</span>
+            </a>
+          </li>
+          <li>
+            <a class="introductionScenarioCategoryManagementLink click" id="introductionScenarioCategoryManagementLink">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <span>Quản lý danh mục kịch bản Giới thiệu</span>
+            </a>
+          </li>
+          <li>
+            <a class="introductionScenarioListManagementLink click" id="introductionScenarioListManagementLink">
+              <i class="fa fa-file-text" aria-hidden="true"></i>
+              <span>Quản lý danh sách kịch bản Giới thiệu</span>
+            </a>
+          </li>
+          <li>
+            <a class="faqManagementLink click" id="faqManagementLink">
+              <i class="fa fa-question-circle" aria-hidden="true"></i>
+              <span>Quản lý các câu hỏi thường gặp</span>
+            </a>
+          </li>
+          <li>
+            <a class="birthdayTemplateManagementLink click" id="birthdayTemplateManagementLink">
+              <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+              <span>Quản lý mẫu chúc mừng sinh nhật</span>
+            </a>
+          </li>
+          <li>
+            <a class="adBudgetTypeManagementLink click" id="adBudgetTypeManagementLink">
+              <i class="fa fa-money" aria-hidden="true"></i>
+              <span>Quản lý Loại ngân sách Quảng cáo</span>
+            </a>
+          </li>
+          <li>
+            <a class="adBudgetManagementLink click" id="adBudgetManagementLink">
+              <i class="fa fa-money" aria-hidden="true"></i>
+              <span>Quản lý ngân sách Quảng cáo</span>
             </a>
           </li>
         </ul>
