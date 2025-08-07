@@ -1527,60 +1527,37 @@ li.partner i.fa-users{
 
 .search-bar {
     text-align: center;
-    margin-top: 30px;
+    margin: 30px;
 }
 
-.bar-chart {
-    display: flex;
-    gap: 20px;
-    height: 60%;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.bar {
-    width: 60px;
-    background-color: steelblue;
-    height: var(--value);
-}
 
 #monthSelect{
     margin-right: 20px;
 }
 
-/* Giao diện biểu đồ tròn */
-.chart-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+/* Giao diện dashboard */
+.chart {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.pie-chart {
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #4A90E2 0% 25%,       /* A - xanh dương */
-    #F5A623 25% 45%,     /* B - cam */
-    #7ED321 45% 100%     /* C - xanh lá */
-  );
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+canvas {
+  height: 500px !important;
 }
 
-.legend {
-  font-size: 14px;
+.title-overview {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px;
 }
 
-.legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-}
-
-.color-box {
-  width: 15px;
-  height: 15px;
-  margin-right: 8px;
+/* Giao diện biểu đồ tròn  */
+.chart_container{
+    display: flex;
+    justify-content: center;
 }

@@ -1,7 +1,7 @@
 <div class="content-page">
     <div class="container">
         <div class="content">
-            <p class="title-chart">Biểu đồ top 10 người dùng tích hợp nhiều nhất</p>
+            <p class="title-overview">Biểu đồ top 10 người dùng tích hợp nhiều nhất</p>
         </div>
         <div class="search-bar">
             <select id="monthSelect">
@@ -14,14 +14,10 @@
                 <option value="2025">2025</option>
             </select>
         </div>
-        <div class="chart-container">
-            <div class="pie-chart"></div>
-            <div class="legend">
-                <div class="legend-item"><div class="color-box" style="background:#4A90E2"></div> A - 25%</div>
-                <div class="legend-item"><div class="color-box" style="background:#F5A623"></div> B - 20%</div>
-                <div class="legend-item"><div class="color-box" style="background:#7ED321"></div> C - 55%</div>
-            </div>
+        <div class="chart">
+            <canvas id="top10IntegratedUsers"></canvas>
         </div>
     </div>
 </div>
-<script th:src="@{/web/js/report/charts.js}"></script>
+<script th:src="@{/web/js/report/bieudo/bieudo.js}"></script>
+

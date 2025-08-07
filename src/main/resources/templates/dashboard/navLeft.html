@@ -1,4 +1,4 @@
-<div class="slimscroll-menu" xmlns:sec="http://www.w3.org/1999/xhtml">
+<div class="slimscroll-menu" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 
   <!-- LOGO -->
   <a href="#" class="logo text-center mb-4">
@@ -26,7 +26,7 @@
       <li class="qlSystemAdmin" sec:authorize="hasRole('ADMIN')">
         <a class="click" id="viewSystemAdmin" href="#">
           <i class="fa fa-cog" aria-hidden="true"></i>
-          <span> Quản trị hệ thống </span>
+          <span> Quản lý hệ thống </span>
           <i class="fa fa-sort-desc" aria-hidden="true"></i>
         </a>
         <ul class="ul-children">
@@ -559,7 +559,7 @@
           </li>
           <li>
             <a class="apiIncidentLink click" id="apiIncidentLink">
-              <i class="fa fa-ambulance" aria-hidden="true"></i>
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
               <span> Quản lý sự cố dịch vụ API </span>
             </a>
           </li>
@@ -695,9 +695,253 @@
               </li>
             </ul>
           </li>
+          <li class="qlBilling" sec:authorize="hasRole('ADMIN')">
+            <a class="click" id="viewBilling" href="#">
+              <i class="fa fa-file-text-o" aria-hidden="true"></i>
+              <span> Quản lý Billing và đối soát </span>
+              <i class="fa fa-sort-desc" aria-hidden="true"></i>
+            </a>
+            <ul class="ul-children-group">
+              <li>
+                <a class="customerProfileManagementLink click" id="customerProfileManagementLink">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>Quản lý hồ sơ khách hàng</span>
+                </a>
+              </li>
+              <li>
+                <a class="customerProfileGroupManagementLink click" id="customerProfileGroupManagementLink">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                  <span>Quản lý nhóm hồ sơ khách hàng</span>
+                </a>
+              </li>
+              <li>
+                <a class="customerProfileTypeManagementLink click" id="customerProfileTypeManagementLink">
+                  <i class="fa fa-folder-open" aria-hidden="true"></i>
+                  <span>Quản lý Loại hồ sơ khách hàng</span>
+                </a>
+              </li>
+              <li>
+                <a class="customerTransactionHistoryLink click" id="customerTransactionHistoryLink">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  <span>Quản lý lịch sử giao dịch từng khách hàng</span>
+                </a>
+              </li>
+              <li>
+                <a class="customerInvoiceHistoryLink click" id="customerInvoiceHistoryLink">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  <span>Quản lý lịch sử hóa đơn từng khách hàng</span>
+                </a>
+              </li>
+              <li>
+                <a class="customerPaymentHistoryLink click" id="customerPaymentHistoryLink">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  <span>Quản lý lịch sử thanh toán từng khách hàng</span>
+                </a>
+              </li>
+              <li>
+                <a class="serviceUsageHistoryLink click" id="serviceUsageHistoryLink">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  <span>Quản lý lịch sử sử dụng dịch vụ</span>
+                </a>
+              </li>
+              <li>
+                <a class="invoiceGroupManagementLink click" id="invoiceGroupManagementLink">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  <span>Quản lý nhóm hóa đơn</span>
+                </a>
+              </li>
+              <li>
+                <a class="invoiceInformationManagementLink click" id="invoiceInformationManagementLink">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  <span>Quản lý thông tin hóa đơn</span>
+                </a>
+              </li>
+              <li>
+                <a class="invoiceStatusManagementLink click" id="invoiceStatusManagementLink">
+                  <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                  <span>Quản lý tình trạng hóa đơn</span>
+                </a>
+              </li>
+              <li>
+                <a class="contractTypeManagementLink click" id="contractTypeManagementLink">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  <span>Quản lý loại hợp đồng</span>
+                </a>
+              </li>
+              <li>
+                <a class="contractInformationManagementLink click" id="contractInformationManagementLink">
+                  <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  <span>Quản lý thông tin hợp đồng</span>
+                </a>
+              </li>
+              <li>
+                <a class="contractTermsManagementLink click" id="contractTermsManagementLink">
+                  <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  <span>Quản lý điều khoản hợp đồng</span>
+                </a>
+              </li>
+              <li>
+                <a class="contractDurationManagementLink click" id="contractDurationManagementLink">
+                  <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  <span>Quản lý thời hạn hợp đồng</span>
+                </a>
+              </li>
+              <li>
+                <a class="contractExtensionManagementLink click" id="contractExtensionManagementLink">
+                  <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  <span>Quản lý thông tin gia hạn hợp đồng</span>
+                </a>
+              </li>
+              <li>
+                <a class="contractStatusManagementLink click" id="contractStatusManagementLink">
+                  <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                  <span>Quản lý tình trạng hợp đồng</span>
+                </a>
+              </li>
+              <li>
+                <a class="normCategoryManagementLink click" id="normCategoryManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Danh mục Định mức</span>
+                </a>
+              </li>
+              <li>
+                <a class="normManagementLink click" id="normManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Định mức</span>
+                </a>
+              </li>
+              <li>
+                <a class="apiKeyManagementLink click" id="apiKeyManagementLink">
+                  <i class="fa fa-key" aria-hidden="true"></i>
+                  <span>Quản lý Thông tin API KEY</span>
+                </a>
+              </li>
+              <li>
+                <a class="paymentMethodManagementLink click" id="paymentMethodManagementLink">
+                  <i class="fa fa-credit-card" aria-hidden="true"></i>
+                  <span>Quản lý Phương thức thanh toán</span>
+                </a>
+              </li>
+              <li>
+                <a class="refundManagementLink click" id="refundManagementLink">
+                  <i class="fa fa-undo" aria-hidden="true"></i>
+                  <span>Quản lý hoàn tiền - trả lại</span>
+                </a>
+              </li>
+              <li>
+                <a class="debtCategoryManagementLink click" id="debtCategoryManagementLink">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  <span>Quản lý danh mục nợ</span>
+                </a>
+              </li>
+              <li>
+                <a class="debtCollectionManagementLink click" id="debtCollectionManagementLink">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  <span>Quản lý thu nợ</span>
+                </a>
+              </li>
+              <li>
+                <a class="debtHistoryManagementLink click" id="debtHistoryManagementLink">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  <span>Quản lý lịch sử nợ</span>
+                </a>
+              </li>
+              <li>
+                <a class="complaintCategoryManagementLink click" id="complaintCategoryManagementLink">
+                  <i class="fa fa-folder" aria-hidden="true"></i>
+                  <span>Quản lý danh mục khiếu nại</span>
+                </a>
+              </li>
+              <li>
+                <a class="complaintResolutionManagementLink click" id="complaintResolutionManagementLink">
+                  <i class="fa fa-wrench" aria-hidden="true"></i>
+                  <span>Quản lý xử lý khiếu nại</span>
+                </a>
+              </li>
+              <li>
+                <a class="discountTypeManagementLink click" id="discountTypeManagementLink">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  <span>Quản lý hình thức chiết khấu</span>
+                </a>
+              </li>
+              <li>
+                <a class="discountManagementLink click" id="discountManagementLink">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  <span>Quản lý chiết khấu</span>
+                </a>
+              </li>
+              <li>
+                <a class="promotionTypeManagementLink click" id="promotionTypeManagementLink">
+                  <i class="fa fa-gift" aria-hidden="true"></i>
+                  <span>Quản lý loại khuyến mãi</span>
+                </a>
+              </li>
+              <li>
+                <a class="promotionCodeManagementLink click" id="promotionCodeManagementLink">
+                  <i class="fa fa-gift" aria-hidden="true"></i>
+                  <span>Quản lý mã khuyến mãi</span>
+                </a>
+              </li>
+              <li>
+                <a class="priceCategoryManagementLink click" id="priceCategoryManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Danh mục giá</span>
+                </a>
+              </li>
+              <li>
+                <a class="priceManagementLink click" id="priceManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Giá</span>
+                </a>
+              </li>
+              <li>
+                <a class="productServiceCategoryManagementLink click" id="productServiceCategoryManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Danh mục sản phẩm/dịch vụ</span>
+                </a>
+              </li>
+              <li>
+                <a class="productServiceListManagementLink click" id="productServiceListManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Danh sách sản phẩm/dịch vụ</span>
+                </a>
+              </li>
+              <li>
+                <a class="discountCategoryManagementLink click" id="discountCategoryManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Danh mục Chiết khấu</span>
+                </a>
+              </li>
+              <li>
+                <a class="discountListManagementLink click" id="discountListManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Danh sách Chiết khấu</span>
+                </a>
+              </li>
+              <li>
+                <a class="contractRenewalManagementLink click" id="contractRenewalManagementLink">
+                  <i class="fa fa-refresh" aria-hidden="true"></i>
+                  <span>Quản lý Tái ký hợp đồng</span>
+                </a>
+              </li>
+              <li>
+                <a class="paymentNotificationManagementLink click" id="paymentNotificationManagementLink">
+                  <i class="fa fa-bell" aria-hidden="true"></i>
+                  <span>Quản lý thông báo thanh toán</span>
+                </a>
+              </li>
+              <li>
+                <a class="defaultCostCategoryManagementLink click" id="defaultCostCategoryManagementLink">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  <span>Quản lý Danh mục chi phí mặc định</span>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </li>
 
+      <!-- Quản lý dịch vụ -->
       <li class="qlService" sec:authorize="hasRole('ADMIN')">
         <a class="click" id="viewDv" href="#">
           <i class="fa fa-rocket" aria-hidden="true"></i>
@@ -906,6 +1150,459 @@
               <span> Báo cáo theo nhóm đơn vị </span>
             </a>
           </li>
+          <!-- Phần giao diện dashboard -->
+          <li>
+            <a class="systemPerformanceDashboardLink click" id="systemPerformanceDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Hiệu Suất Hệ Thống</span>
+            </a>
+          </li>
+          <li>
+            <a class="serviceStatusDashboardLink click" id="serviceStatusDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Trạng Thái Dịch Vụ</span>
+            </a>
+          </li>
+          <li>
+            <a class="logErrorManagementDashboardLink click" id="logErrorManagementDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Quản Lý Log & Lỗi</span>
+            </a>
+          </li>
+          <li>
+            <a class="securityDashboardLink click" id="securityDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Bảo Mật</span>
+            </a>
+          </li>
+          <li>
+            <a class="databasePerformanceDashboardLink click" id="databasePerformanceDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Hiệu Suất Cơ Sở Dữ Liệu</span>
+            </a>
+          </li>
+          <li>
+            <a class="userInteractionDashboardLink click" id="userInteractionDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Người Dùng & Tương Tác</span>
+            </a>
+          </li>
+          <li>
+            <a class="serverResourcesDashboardLink click" id="serverResourcesDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tài Nguyên Máy Chủ</span>
+            </a>
+          </li>
+          <li>
+            <a class="devopsCiCdDashboardLink click" id="devopsCiCdDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về DevOps & CI/CD</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerOverviewDashboardLink click" id="customerOverviewDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng quan khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerRetentionDashboardLink click" id="customerRetentionDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Giữ chân khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerSupportDashboardLink click" id="customerSupportDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Hỗ trợ khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerSegmentationDashboardLink click" id="customerSegmentationDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Phân khúc khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerCareDashboardLink click" id="customerCareDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Chăm sóc khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="complaintManagementDashboardLink click" id="complaintManagementDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Quản lý khiếu nại</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerFeedbackDashboardLink click" id="customerFeedbackDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Đánh giá khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="currentTicketCountDashboardLink click" id="currentTicketCountDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng số ticket hiện tại</span>
+            </a>
+          </li>
+          <li>
+            <a class="ticketStatusDashboardLink click" id="ticketStatusDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Phân loại ticket theo trạng thái</span>
+            </a>
+          </li>
+          <li>
+            <a class="ticketPriorityDashboardLink click" id="ticketPriorityDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Phân loại theo độ ưu tiên</span>
+            </a>
+          </li>
+          <li>
+            <a class="averageResolutionTimeDashboardLink click" id="averageResolutionTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Thời gian trung bình xử lý ticket</span>
+            </a>
+          </li>
+          <li>
+            <a class="onTimeResolutionRateDashboardLink click" id="onTimeResolutionRateDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ giải quyết ticket đúng hạn</span>
+            </a>
+          </li>
+          <li>
+            <a class="ticketPerSupportStaffDashboardLink click" id="ticketPerSupportStaffDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số lượng ticket mỗi nhân viên hỗ trợ xử lý</span>
+            </a>
+          </li>
+          <li>
+            <a class="averageResponseTimeDashboardLink click" id="averageResponseTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Thời gian phản hồi trung bình</span>
+            </a>
+          </li>
+          <li>
+            <a class="averageHandlingTimeDashboardLink click" id="averageHandlingTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Thời gian xử lý trung bình</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerSatisfactionRateDashboardLink click" id="customerSatisfactionRateDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ khách hàng hài lòng</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerFeedbackQualityDashboardLink click" id="customerFeedbackQualityDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Đánh giá chất lượng phản hồi từ khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="activeContractCountDashboardLink click" id="activeContractCountDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard Tổng số hợp đồng đang hoạt động</span>
+            </a>
+          </li>
+          <li>
+            <a class="contractPerformanceDashboardLink click" id="contractPerformanceDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard Hiệu Suất Hợp Đồng</span>
+            </a>
+          </li>
+          <li>
+            <a class="highRiskContractDashboardLink click" id="highRiskContractDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard Danh sách hợp đồng có điều khoản rủi ro cao</span>
+            </a>
+          </li>
+          <li>
+            <a class="delayedContractStatusDashboardLink click" id="delayedContractStatusDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard Tình trạng hợp đồng bị chậm trễ</span>
+            </a>
+          </li>
+          <li>
+            <a class="contractTypeCountDashboardLink click" id="contractTypeCountDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard Số lượng hợp đồng theo loại</span>
+            </a>
+          </li>
+          <li>
+            <a class="slaComplianceRateDashboardLink click" id="slaComplianceRateDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ ticket được xử lý đúng SLA</span>
+            </a>
+          </li>
+          <li>
+            <a class="slaViolationTicketDashboardLink click" id="slaViolationTicketDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Ticket vi phạm SLA</span>
+            </a>
+          </li>
+          <li>
+            <a class="slaViolationCauseAnalysisDashboardLink click" id="slaViolationCauseAnalysisDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Phân tích nguyên nhân vi phạm SLA</span>
+            </a>
+          </li>
+          <li>
+            <a class="ticketTopicClassificationDashboardLink click" id="ticketTopicClassificationDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Phân loại ticket theo chủ đề</span>
+            </a>
+          </li>
+          <li>
+            <a class="frequentTicketsDashboardLink click" id="frequentTicketsDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Ticket thường gặp nhất</span>
+            </a>
+          </li>
+          <li>
+            <a class="customerSatisfactionLevelDashboardLink click" id="customerSatisfactionLevelDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Mức độ hài lòng của khách hàng</span>
+            </a>
+          </li>
+          <li>
+            <a class="averageContactCountDashboardLink click" id="averageContactCountDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số lần liên hệ trung bình để giải quyết một vấn đề</span>
+            </a>
+          </li>
+          <li>
+            <a class="revenueOverviewDashboardLink click" id="revenueOverviewDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng quan về doanh thu, số lượng hóa đơn đã phát hành, đã thanh toán, chưa thanh toán</span>
+            </a>
+          </li>
+          <li>
+            <a class="revenueOverTimeDashboardLink click" id="revenueOverTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về doanh thu theo thời gian</span>
+            </a>
+          </li>
+          <li>
+            <a class="onTimeVsLatePaymentDashboardLink click" id="onTimeVsLatePaymentDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ thanh toán đúng hạn và quá hạn</span>
+            </a>
+          </li>
+          <li>
+            <a class="detailedInvoiceListDashboardLink click" id="detailedInvoiceListDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Danh sách hóa đơn chi tiết</span>
+            </a>
+          </li>
+          <li>
+            <a class="paymentStatusDashboardLink click" id="paymentStatusDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Trạng thái thanh toán</span>
+            </a>
+          </li>
+          <li>
+            <a class="recurringRevenueDashboardLink click" id="recurringRevenueDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Doanh thu từ các gói đăng ký định kỳ</span>
+            </a>
+          </li>
+          <li>
+            <a class="serviceRevenueDashboardLink click" id="serviceRevenueDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Doanh thu theo dịch vụ</span>
+            </a>
+          </li>
+          <li>
+            <a class="overdueCustomerListDashboardLink click" id="overdueCustomerListDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Danh sách khách hàng nợ quá hạn</span>
+            </a>
+          </li>
+          <li>
+            <a class="unpaidAmountOverTimeDashboardLink click" id="unpaidAmountOverTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng số tiền chưa thanh toán theo thời gian</span>
+            </a>
+          </li>
+          <li>
+            <a class="contractExpirationAlertDashboardLink click" id="contractExpirationAlertDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Cảnh báo các hợp đồng sắp đến hạn</span>
+            </a>
+          </li>
+          <li>
+            <a class="activeApiCountDashboardLink click" id="activeApiCountDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng quan số lượng API đang hoạt động</span>
+            </a>
+          </li>
+          <li>
+            <a class="realTimeApiRequestDashboardLink click" id="realTimeApiRequestDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số request API theo thời gian thực</span>
+            </a>
+          </li>
+          <li>
+            <a class="apiErrorByCodeDashboardLink click" id="apiErrorByCodeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng số lỗi API theo mã lỗi</span>
+            </a>
+          </li>
+          <li>
+            <a class="averageApiPerformanceDashboardLink click" id="averageApiPerformanceDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Hiệu suất trung bình của API</span>
+            </a>
+          </li>
+          <li>
+            <a class="apiRequestOverTimeDashboardLink click" id="apiRequestOverTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng số request API theo thời gian</span>
+            </a>
+          </li>
+          <li>
+            <a class="requestByRegionDashboardLink click" id="requestByRegionDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Request theo khu vực</span>
+            </a>
+          </li>
+          <li>
+            <a class="requestByDeviceDashboardLink click" id="requestByDeviceDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Request theo loại thiết bị</span>
+            </a>
+          </li>
+          <li>
+            <a class="successFailureRateDashboardLink click" id="successFailureRateDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ request thành công và thất bại</span>
+            </a>
+          </li>
+          <li>
+            <a class="fastestSlowestRequestDashboardLink click" id="fastestSlowestRequestDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Request chậm nhất, nhanh nhất</span>
+            </a>
+          </li>
+          <li>
+            <a class="errorRateByEndpointDashboardLink click" id="errorRateByEndpointDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ lỗi theo endpoint API</span>
+            </a>
+          </li>
+          <li>
+            <a class="apiVersionPerformanceComparisonDashboardLink click" id="apiVersionPerformanceComparisonDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về So sánh hiệu suất API theo phiên bản</span>
+            </a>
+          </li>
+          <li>
+            <a class="abnormalRequestCountDashboardLink click" id="abnormalRequestCountDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số lượng request bất thường</span>
+            </a>
+          </li>
+          <li>
+            <a class="authErrorRequestDashboardLink click" id="authErrorRequestDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số request bị từ chối do lỗi xác thực</span>
+            </a>
+          </li>
+          <li>
+            <a class="suspiciousIpRequestDashboardLink click" id="suspiciousIpRequestDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Request từ IP đáng ngờ</span>
+            </a>
+          </li>
+          <li>
+            <a class="rateLimitedRequestDashboardLink click" id="rateLimitedRequestDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số request bị giới hạn tốc độ</span>
+            </a>
+          </li>
+          <li>
+            <a class="quotaExceededRequestDashboardLink click" id="quotaExceededRequestDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ request bị từ chối do vượt hạn mức</span>
+            </a>
+          </li>
+          <li>
+            <a class="exceededQuotaApiKeyDashboardLink click" id="exceededQuotaApiKeyDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tổng số API Key sử dụng vượt quota</span>
+            </a>
+          </li>
+          <li>
+            <a class="requestLimitComparisonUserDashboardLink click" id="requestLimitComparisonUserDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về So sánh giới hạn request theo user</span>
+            </a>
+          </li>
+          <li>
+            <a class="requestLimitComparisonClientDashboardLink click" id="requestLimitComparisonClientDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về So sánh giới hạn request theo client</span>
+            </a>
+          </li>
+          <li>
+            <a class="commonErrorsAndCodesDashboardLink click" id="commonErrorsAndCodesDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Danh sách lỗi phổ biến và mã lỗi</span>
+            </a>
+          </li>
+          <li>
+            <a class="averageErrorHandlingTimeDashboardLink click" id="averageErrorHandlingTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Thời gian trung bình để xử lý lỗi</span>
+            </a>
+          </li>
+          <li>
+            <a class="activeApiKeyCountDashboardLink click" id="activeApiKeyCountDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số lượng API Key đang hoạt động</span>
+            </a>
+          </li>
+          <li>
+            <a class="revenueByApiPackageDashboardLink click" id="revenueByApiPackageDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Doanh thu theo từng gói API</span>
+            </a>
+          </li>
+          <li>
+            <a class="apiRenewalRateDashboardLink click" id="apiRenewalRateDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Tỷ lệ gia hạn API</span>
+            </a>
+          </li>
+          <li>
+            <a class="apiCancellationDashboardLink click" id="apiCancellationDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về hủy bỏ gói API</span>
+            </a>
+          </li>
+          <li>
+            <a class="activeApiVersionsDashboardLink click" id="activeApiVersionsDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Số lượng phiên bản API đang hoạt động</span>
+            </a>
+          </li>
+          <li>
+            <a class="apiRequestByVersionDashboardLink click" id="apiRequestByVersionDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Request theo phiên bản API</span>
+            </a>
+          </li>
+          <li>
+            <a class="apiPaymentOverTimeDashboardLink click" id="apiPaymentOverTimeDashboardLink">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              <span>Dashboard tổng quan về Thanh toán API theo thời gian</span>
+            </a>
+          </li>
+
+          <!-- Phần giao diện biểu đồ -->
           <li>
             <a class="testEnvServiceStatusChart click" id="testEnvServiceStatusChart">
               <i class="fa fa-bar-chart" aria-hidden="true"></i>

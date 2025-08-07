@@ -1,7 +1,7 @@
 <div class="content-page">
     <div class="container">
         <div class="content">
-            <p class="title-chart">Biểu đồ tỷ lệ yêu cầu dịch vụ theo trạng thái</p>
+            <p class="title-overview">Biểu đồ tỷ lệ yêu cầu dịch vụ theo trạng thái</p>
         </div>
         <div class="search-bar">
             <select id="monthSelect">
@@ -14,15 +14,10 @@
                 <option value="2025">2025</option>
             </select>
         </div>
-        <div class="bar-chart">
-            <div class="bar" style="--value: 60%">A</div>
-            <div class="bar" style="--value: 45%">B</div>
-            <div class="bar" style="--value: 90%">C</div>
-            <div class="bar" style="--value: 82%">D</div>
-            <div class="bar" style="--value: 25%">E</div>
-            <div class="bar" style="--value: 66%">F</div>
-            <div class="bar" style="--value: 86%">G</div>
+        <div class="chart">
+            <canvas id="requestRatioByStatus"></canvas>
         </div>
     </div>
 </div>
-<script th:src="@{/web/js/report/charts.js}"></script>
+<script th:src="@{/web/js/report/bieudo/bieudo.js}"></script>
+
